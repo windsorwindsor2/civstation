@@ -1,12 +1,12 @@
-# civil-stations
+# civstation
 
 ## Overview
-A simple library that provides a Station object, which represents a Station of the kind found in civil plans of roads and other linear features, where 5+10 for example represents a point 510 feet (or meters) from an arbitrary starting point.
+A simple library that provides a Station object, which represents a Station of the kind found in civil plans of roads and other linear features, where 5+10 for example represents a point 510 feet (or meters or any units) from an arbitrary starting point.
 
 ## Station objects
 Import the Station class:
 ```python
-from civil-station import Station
+from civstation import Station
 ```
 Create a station object:
 ```python
