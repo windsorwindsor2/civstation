@@ -4,11 +4,11 @@
 
    [project]
    name = "civstation"
-   version = "0.1.0"
+   version = "0.1.1"
    authors = [
      { name="Scott Windsor", email="windsorwindsor2@protonmail.com" },
    ]
-   description = "Support for stationing used in civil plans, in US units."
+   description = "Support for stationing used in civil plans"
    readme = "README.md"
    license = { file = "LICENSE.txt" }
    requires-python = ">=3.7"
@@ -16,10 +16,11 @@
        "Programming Language :: Python :: 3",
        "License :: OSI Approved :: MIT License",
        "Operating System :: OS Independent",
+       "Topic :: Scientific/Engineering"
    ]
 
    [project.urls]
-   "Homepage" = "https://github.com/windsorwindsor2/civilstation"
+   "Homepage" = "https://github.com/windsorwindsor2/civstation"
    
 
    

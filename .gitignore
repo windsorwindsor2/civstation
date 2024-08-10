@@ -4,3 +4,5 @@
 /Scripts
 pyvenv.cfg
 /build
+/dist
+*.egg-info

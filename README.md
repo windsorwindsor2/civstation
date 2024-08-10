@@ -1,7 +1,7 @@
 # civstation
 
 ## Overview
-A simple library that provides a Station object, which represents a Station of the kind found in civil plans of roads and other linear features, where 5+10 for example represents a point 510 feet (or meters or any units) from an arbitrary starting point.
+Provides a Station object, which represents a Station of the kind found in civil plans of roads and other linear features, where 5+10 for example represents a point 510 feet (or meters or any units) from an arbitrary starting point.
 
 ## Station objects
 Import the Station class:
@@ -40,8 +40,8 @@ Subtracting a a Station from a Station returns a **float**. This is because stat
 
 There doesn't appear to be a good reason to multiply or divide Stations, so it is not supported. If this is necessary, convert them to floats or another suitable type.  
 
-## Defnition of Station object
-The following code shows the args taken be a Station object.
+## Definition of Station object
+The following code shows the args taken by a Station object.
 ```python
 class Station:
     def __init__(self, sta, decimal_places = 2, return_float_on_sub = True) -> None:
