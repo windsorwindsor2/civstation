@@ -20,6 +20,8 @@ Stations can also be made from a number, which will convert it to a Station.
 4+56.78
 ```
 
+Stations can also be made from a Station, for ease of implentation.
+
 Stations default to displaying two decimal places with trailing zeros. This can be changed by setting decimal_places to the desired number.
 
 ```python

@@ -3,8 +3,10 @@ class Station:
         self.decimal_places = decimal_places
         self.return_float_on_sub = return_float_on_sub  
         
+        if isinstance(sta, Station):
+            self.val = float(sta)
         #sta should be a number, or a station in 12+34 or 12+34.56 format.
-        if "+" in str(sta):
+        elif "+" in str(sta):
             if sta.count("+") > 1: raise ValueError("Station should only have one + character.")   
             elif "." in sta and sta.index(".")-sta.index("+") != 3:
                 raise ValueError("There should be two digits between + character and decimal point.")
@@ -19,7 +21,7 @@ class Station:
             try:
                 self.val = float(sta)
             except ValueError:
-                raise ValueError("Not a valid number or station.")
+                raise ValueError("Not a valid number or Station.")
             
     def __str__(self):
         #Show in station format and add leading and trailing zeros as needed.
@@ -77,11 +79,5 @@ class Station:
         else: return False
     def __ge__(self, compare_val) -> bool:
         if self.val >= compare_val: return True
-        else: return False
-    
-if __name__ == "__main__":
-    sta = Station(456.78, decimal_places=4)
-    print (sta)
-
-    
+        else: return False    
   
