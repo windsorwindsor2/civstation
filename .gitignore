@@ -1,5 +1,9 @@
 *.pyc
+/bin
 /Include
+/include
+/lib
+/lib64
 /Lib
 /Scripts
 pyvenv.cfg
