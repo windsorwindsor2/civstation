@@ -1,11 +1,14 @@
 from .stations import Station
 
-#TODO: Debug this code. I ahd to eat dinner and didn't get a chance.
-class Offset:
-    def __init__ (self, offset):
+class Offset(Station):
+    #TODO: Refactor this, it's too complex. But it does work.
+    #get rid of repeated calls to .lower().
+    def __init__ (self, offset, decimal_places = 2, return_float_on_sub = True) ->None:
+            self.decimal_places = decimal_places
+            self.return_float_on_sub = return_float_on_sub
             if isinstance(offset, Offset):
                 self.val=float(offset)
-            elif "rt" in offset.lower() or "lt" in offset.lower():
+            elif "rt" in str(offset).lower() or "lt" in str(offset).lower():
                 negative=False
                 if "rt" in str(offset).lower()[-2:]:
                     if "'" in str(offset):
@@ -23,10 +26,18 @@ class Offset:
             else:
                 try: self.val = float(offset)
                 except: raise ValueError("Not a valid offset.")
-            
+    
+    def __str__(self):
+        offset = f"{round(abs(self.val), self.decimal_places):.{self.decimal_places}f}"
+        if self.val <0: return offset+"LT"
+        elif self.val >0: return offset+"RT"
+        else: return "" 
+
+    def __neg__(self):
+        return Offset(-self.val)    
+
 class Point:
     def __init__ (self,station,offset):
-        self.station= Station(station)
-        self.offset=offset
-        #TODO add a parser to parse offsets such as "34.70RT" and "12.50'LT"
-        #maybe add an Offset object. 
+        #This class will put Station and Offset together as a 2D grid.
+        #maybe put this in a separate file.
+        pass        
