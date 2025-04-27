@@ -3,6 +3,13 @@ from .offset import Offset
 from math import sqrt
 
 class Point:
+    """
+    Represents a point on a 2D plane, where the x and y coordinates are a Station and an Offset.
+
+    Attributes:
+        Station: A Station object, or a number or string that can be made into a Station.
+        Offset: An Offset object, or a number or string that can be made into an Offset.
+    """
     def __init__(self, station: Station, offset = None)->None:
         if offset is None:
             offset = Offset(0)

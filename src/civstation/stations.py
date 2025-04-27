@@ -1,4 +1,12 @@
 class Station:
+    """
+    Represents a Station of the kind found in civil plans of roads and other linear features, 
+    where 5+10 for example represents a point 510 feet (or meters or any units) from an arbitrary starting point.
+    
+    Attributes:
+        sta: Can be in Station notation ("4+56.00") or from a float (456.00)
+        decimal_places: number of decimal places shown. Defaults to 2.
+    """
     def __init__(self, sta, decimal_places = 2, return_float_on_sub = True) -> None:
         self.decimal_places = decimal_places
         self.return_float_on_sub = return_float_on_sub  

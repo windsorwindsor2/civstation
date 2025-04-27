@@ -1,6 +1,14 @@
 from .stations import Station
 
 class Offset(Station):
+    """
+    Represents an Offset of the kind used with Stations in civil plans. 
+    where 86.47RT for example represents a point 86.47 feet (or meters or any units) to the right of the centerline.
+    
+    Attributes:
+        offset: Can be in Offset notation ("45.00LT") or from a float (-45.0). Right is positive and Left is negative.
+        decimal_places: number of decimal places shown. Defaults to 2.
+    """
     #TODO: Refactor this, it's too complex. But it does work.
     #get rid of repeated calls to .lower().
     def __init__ (self, offset, decimal_places = 2, return_float_on_sub = True) ->None:
