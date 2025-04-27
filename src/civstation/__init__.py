@@ -1,3 +1,4 @@
 from .stations import Station
 from .offset import Offset
-__all__ = ["Station","Offset"]
+from .point import Point
+__all__ = ["Station","Offset","Point"]
