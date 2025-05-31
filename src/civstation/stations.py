@@ -1,6 +1,5 @@
 class Station:
-    """
-    Represents a Station of the kind found in civil plans of roads and other linear features, 
+    """Represents a Station of the kind found in civil plans of roads and other linear features, 
     where 5+10 for example represents a point 510 feet (or meters or any units) from an arbitrary starting point.
     
     Attributes:

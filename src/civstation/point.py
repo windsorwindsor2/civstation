@@ -3,8 +3,7 @@ from .offset import Offset
 from math import sqrt
 
 class Point:
-    """
-    Represents a point on a 2D plane, where the x and y coordinates are a Station and an Offset.
+    """Represents a point on a 2D plane, where the x and y coordinates are a Station and an Offset.
 
     Attributes:
         Station: A Station object, or a number or string that can be made into a Station.
@@ -40,7 +39,13 @@ class Point:
         xdist=float(self.station-other.station)
         ydist=float(self.offset-other.offset)
         return sqrt((xdist**2) + (ydist**2))
-        
+    
+    def dist2d(self, other):
+        """Returns a list with both the x (Station) and y (Offset) distances between two Points. 
+        """
+        x_delta = self.station-other.station
+        y_delta = self.offset-other.offset
+        return [x_delta,y_delta]
     
 
     

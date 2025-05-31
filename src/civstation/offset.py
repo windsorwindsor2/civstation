@@ -1,8 +1,7 @@
 from .stations import Station
 
 class Offset(Station):
-    """
-    Represents an Offset of the kind used with Stations in civil plans. 
+    """Represents an Offset of the kind used with Stations in civil plans. 
     where 86.47RT for example represents a point 86.47 feet (or meters or any units) to the right of the centerline.
     
     Attributes:
@@ -42,10 +41,4 @@ class Offset(Station):
         else: return "" 
 
     def __neg__(self):
-        return Offset(-self.val)    
-
-class Point:
-    def __init__ (self,station,offset):
-        #This class will put Station and Offset together as a 2D grid.
-        #maybe put this in a separate file.
-        pass        
+        return Offset(-self.val)
